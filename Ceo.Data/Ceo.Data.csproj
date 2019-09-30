@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0C8F172-9642-46EC-9A11-54EB3E014CCF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ceo.Data</RootNamespace>
+    <AssemblyName>Ceo.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CeoContext.cs" />
+    <Compile Include="CustomerSchedule\CustomersScheduleRepository.cs" />
+    <Compile Include="C__history__.cs" />
+    <Compile Include="dtproperty.cs" />
+    <Compile Include="history_store.cs" />
+    <Compile Include="lkpAdjustmentType.cs" />
+    <Compile Include="lkpAuditedProperty.cs" />
+    <Compile Include="lkpBank.cs" />
+    <Compile Include="lkpBillPayer.cs" />
+    <Compile Include="lkpBuildDep.cs" />
+    <Compile Include="lkpCampaignCategory.cs" />
+    <Compile Include="lkpCategory.cs" />
+    <Compile Include="lkpCCType.cs" />
+    <Compile Include="lkpChargeType.cs" />
+    <Compile Include="lkpChrgStatu.cs" />
+    <Compile Include="lkpCustomDropDown.cs" />
+    <Compile Include="lkpCustomerStatu.cs" />
+    <Compile Include="lkpCustomerSubType.cs" />
+    <Compile Include="lkpCustomerType.cs" />
+    <Compile Include="lkpCustomFieldMaster.cs" />
+    <Compile Include="lkpDebitType.cs" />
+    <Compile Include="lkpDocParentType.cs" />
+    <Compile Include="lkpEmployeeStatu.cs" />
+    <Compile Include="lkpEmployeeSubType.cs" />
+    <Compile Include="lkpEmpPayType.cs" />
+    <Compile Include="lkpEntityNumber.cs" />
+    <Compile Include="lkpInventoryReturnCode.cs" />
+    <Compile Include="lkpInvoiceStatu.cs" />
+    <Compile Include="lkpInvoiceType.cs" />
+    <Compile Include="lkpInvStatu.cs" />
+    <Compile Include="lkpInvSubStatu.cs" />
+    <Compile Include="lkpJobStatu.cs" />
+    <Compile Include="lkpJobSubStatu.cs" />
+    <Compile Include="lkpKit.cs" />
+    <Compile Include="lkpMarketingCode.cs" />
+    <Compile Include="lkpMethodOfPayment.cs" />
+    <Compile Include="lkpNoteCode.cs" />
+    <Compile Include="lkpOSEquipStatu.cs" />
+    <Compile Include="lkpOSEquipSubStatu.cs" />
+    <Compile Include="lkpOTRule.cs" />
+    <Compile Include="lkpPayAdjType.cs" />
+    <Compile Include="lkpPaycheckDetailType.cs" />
+    <Compile Include="lkpPayCycle.cs" />
+    <Compile Include="lkpPayMarital.cs" />
+    <Compile Include="lkpPaymentTerm.cs" />
+    <Compile Include="lkpPOHistoryCode.cs" />
+    <Compile Include="lkpPriceLevel.cs" />
+    <Compile Include="lkpProduct.cs" />
+    <Compile Include="lkpQBExpType.cs" />
+    <Compile Include="lkpQBPackage.cs" />
+    <Compile Include="lkpQuoteGroup.cs" />
+    <Compile Include="lkpQuoteItem.cs" />
+    <Compile Include="lkpQuoteItemType.cs" />
+    <Compile Include="lkpQuoteJobType.cs" />
+    <Compile Include="lkpQuotePickList.cs" />
+    <Compile Include="lkpQuoteQtyType.cs" />
+    <Compile Include="lkpRstrSS.cs" />
+    <Compile Include="lkpSchedEventType.cs" />
+    <Compile Include="lkpServConStatu.cs" />
+    <Compile Include="lkpServConSubStatu.cs" />
+    <Compile Include="lkpService.cs" />
+    <Compile Include="lkpSkill.cs" />
+    <Compile Include="lkpSupplier.cs" />
+    <Compile Include="lkpTaskParentChrgType.cs" />
+    <Compile Include="lkpTaskParentType.cs" />
+    <Compile Include="lkpTaxCode.cs" />
+    <Compile Include="lkpTaxType.cs" />
+    <Compile Include="lkpTemplate.cs" />
+    <Compile Include="lkpTendProp.cs" />
+    <Compile Include="lkpTimeCode.cs" />
+    <Compile Include="lkpTransactionType.cs" />
+    <Compile Include="lkpUnit.cs" />
+    <Compile Include="lkpUserGroupRight.cs" />
+    <Compile Include="lkpWebEvent.cs" />
+    <Compile Include="lkpZIPCode.cs" />
+    <Compile Include="lkpZIPZoneLink.cs" />
+    <Compile Include="lkpZone.cs" />
+    <Compile Include="lkpZonePricing.cs" />
+    <Compile Include="lnkBonusPropertyList.cs" />
+    <Compile Include="lnkBonusRuleAccount.cs" />
+    <Compile Include="lnkBranchInventory.cs" />
+    <Compile Include="lnkBranchProfile.cs" />
+    <Compile Include="lnkCategoryAccount.cs" />
+    <Compile Include="lnkDispatch.cs" />
+    <Compile Include="lnkDoc.cs" />
+    <Compile Include="lnkEmpUserGroup.cs" />
+    <Compile Include="lnkHolidayAssign.cs" />
+    <Compile Include="lnkInventory.cs" />
+    <Compile Include="lnkKitItem.cs" />
+    <Compile Include="lnkLocInvLevel.cs" />
+    <Compile Include="lnkNSInventory.cs" />
+    <Compile Include="lnkOrgCustPayType.cs" />
+    <Compile Include="lnkOTRuleAccount.cs" />
+    <Compile Include="lnkOTRuleAppl.cs" />
+    <Compile Include="lnkOTRuleOR.cs" />
+    <Compile Include="lnkPayAdjAccount.cs" />
+    <Compile Include="lnkProdServTask.cs" />
+    <Compile Include="lnkQBInvoiceExport.cs" />
+    <Compile Include="lnkQBSupplier.cs" />
+    <Compile Include="lnkQuoteGroupItem.cs" />
+    <Compile Include="lnkQuoteGroupP.cs" />
+    <Compile Include="lnkQuoteJobTypeGroup.cs" />
+    <Compile Include="lnkQuoteJobTypeItemOrder.cs" />
+    <Compile Include="lnkQuotePickListQty.cs" />
+    <Compile Include="lnkRegionInventory.cs" />
+    <Compile Include="lnkRegionProfile.cs" />
+    <Compile Include="lnkServConLineEquip.cs" />
+    <Compile Include="lnkServConLineP.cs" />
+    <Compile Include="lnkTaskAssign.cs" />
+    <Compile Include="lnkTeamAppointment.cs" />
+    <Compile Include="lnkTeamCategory.cs" />
+    <Compile Include="lnkTeamCustomer.cs" />
+    <Compile Include="lnkTeamSubStatu.cs" />
+    <Compile Include="lnkTendProp.cs" />
+    <Compile Include="lnkZonePricingP.cs" />
+    <Compile Include="MD_AssignedInventory.cs" />
+    <Compile Include="MD_NewInventory.cs" />
+    <Compile Include="MD_tblJobs.cs" />
+    <Compile Include="MD_tblPayment.cs" />
+    <Compile Include="MD_tblPaymentDetails.cs" />
+    <Compile Include="MD_tblPayroll.cs" />
+    <Compile Include="MD_tblProductCharges.cs" />
+    <Compile Include="MD_tblServiceCharges.cs" />
+    <Compile Include="MD_tblTimestamps.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysGraph.cs" />
+    <Compile Include="sysGridSetting.cs" />
+    <Compile Include="sysListField.cs" />
+    <Compile Include="sysListGroup.cs" />
+    <Compile Include="sysListUserPref.cs" />
+    <Compile Include="sysMemoOption.cs" />
+    <Compile Include="sysOption.cs" />
+    <Compile Include="sysProgress.cs" />
+    <Compile Include="sysReport.cs" />
+    <Compile Include="sysValidatorLog.cs" />
+    <Compile Include="tblAdjustment.cs" />
+    <Compile Include="tblAudit.cs" />
+    <Compile Include="tblBatchCommSumm.cs" />
+    <Compile Include="tblBatchJob.cs" />
+    <Compile Include="tblBatchJobProduct.cs" />
+    <Compile Include="tblBatchJobService.cs" />
+    <Compile Include="tblBillingProp.cs" />
+    <Compile Include="tblBillingSplit.cs" />
+    <Compile Include="tblBonu.cs" />
+    <Compile Include="tblBonusRule.cs" />
+    <Compile Include="tblBranch.cs" />
+    <Compile Include="tblCallCmd.cs" />
+    <Compile Include="tblCallCmdProp.cs" />
+    <Compile Include="tblCallField.cs" />
+    <Compile Include="tblCallFieldSet.cs" />
+    <Compile Include="tblCallType.cs" />
+    <Compile Include="tblCancellation.cs" />
+    <Compile Include="tblCapAdjust.cs" />
+    <Compile Include="tblCapSlot.cs" />
+    <Compile Include="tblCapWindow.cs" />
+    <Compile Include="tblChrgAppl.cs" />
+    <Compile Include="tblChrgApplGrp.cs" />
+    <Compile Include="tblCommProduct.cs" />
+    <Compile Include="tblCommService.cs" />
+    <Compile Include="tblCompleteJobType.cs" />
+    <Compile Include="tblCompleteMisc.cs" />
+    <Compile Include="tblCompleteProduct.cs" />
+    <Compile Include="tblCompleteQuoteGroup.cs" />
+    <Compile Include="tblCompleteQuoteItem.cs" />
+    <Compile Include="tblCompleteService.cs" />
+    <Compile Include="tblCompProfile.cs" />
+    <Compile Include="tblCompTimeBlock.cs" />
+    <Compile Include="tblContact.cs" />
+    <Compile Include="tblCustomer.cs" />
+    <Compile Include="tblCustomerCommunicationHistory.cs" />
+    <Compile Include="tblCustomerNote.cs" />
+    <Compile Include="tblDemographic.cs" />
+    <Compile Include="tblDemographicData.cs" />
+    <Compile Include="tblDeposit.cs" />
+    <Compile Include="tblDispatchEmpWorkHour.cs" />
+    <Compile Include="tblDispatchJobNote.cs" />
+    <Compile Include="tblDroppedInvoice.cs" />
+    <Compile Include="tblEmpLossTeam.cs" />
+    <Compile Include="tblEmpLossTeamLink.cs" />
+    <Compile Include="tblEmployee.cs" />
+    <Compile Include="tblEmployeeNote.cs" />
+    <Compile Include="tblEmployeeSharing.cs" />
+    <Compile Include="tblEmployeeSignout.cs" />
+    <Compile Include="tblEmpWorkHour.cs" />
+    <Compile Include="tblEstimate.cs" />
+    <Compile Include="tblEstNote.cs" />
+    <Compile Include="tblFranchise.cs" />
+    <Compile Include="tblHoliday.cs" />
+    <Compile Include="tblInquiry.cs" />
+    <Compile Include="tblInvAdjAcct.cs" />
+    <Compile Include="tblInvAvgCost.cs" />
+    <Compile Include="tblInvoice.cs" />
+    <Compile Include="tblInvoiceProduct.cs" />
+    <Compile Include="tblInvoiceService.cs" />
+    <Compile Include="tblInvTransfer.cs" />
+    <Compile Include="tblInvTransTicket.cs" />
+    <Compile Include="tblJob.cs" />
+    <Compile Include="tblKitInstance.cs" />
+    <Compile Include="tblLimbo.cs" />
+    <Compile Include="tblLocation.cs" />
+    <Compile Include="tblLocking.cs" />
+    <Compile Include="tblMiscCharge.cs" />
+    <Compile Include="tblNamedView.cs" />
+    <Compile Include="tblNamedViewProp.cs" />
+    <Compile Include="tblOrder.cs" />
+    <Compile Include="tblOrganisation.cs" />
+    <Compile Include="tblOSEquip.cs" />
+    <Compile Include="tblPayCheck.cs" />
+    <Compile Include="tblPaycheckDetail.cs" />
+    <Compile Include="tblPayrollAdj.cs" />
+    <Compile Include="tblPO.cs" />
+    <Compile Include="tblPOHistory.cs" />
+    <Compile Include="tblPOItem.cs" />
+    <Compile Include="tblPOItemIntent.cs" />
+    <Compile Include="tblPOMiscItem.cs" />
+    <Compile Include="tblQBExport.cs" />
+    <Compile Include="tblQuote.cs" />
+    <Compile Include="tblRefund.cs" />
+    <Compile Include="tblRefundItem.cs" />
+    <Compile Include="tblRegion.cs" />
+    <Compile Include="tblReturn.cs" />
+    <Compile Include="tblSchedProd.cs" />
+    <Compile Include="tblSchedService.cs" />
+    <Compile Include="tblSchedule.cs" />
+    <Compile Include="tblServConLine.cs" />
+    <Compile Include="tblServContract.cs" />
+    <Compile Include="tblSkillInstance.cs" />
+    <Compile Include="tblStockLocation.cs" />
+    <Compile Include="tblSubStockLocation.cs" />
+    <Compile Include="tblSupplierCatalog.cs" />
+    <Compile Include="tblTask.cs" />
+    <Compile Include="tblTaskNote.cs" />
+    <Compile Include="tblTaskSched.cs" />
+    <Compile Include="tblTeam.cs" />
+    <Compile Include="tblTeamDayProp.cs" />
+    <Compile Include="tblTeamEmployee.cs" />
+    <Compile Include="tblTeamZone.cs" />
+    <Compile Include="tblTemplate.cs" />
+    <Compile Include="tblTender.cs" />
+    <Compile Include="tblTimeCard.cs" />
+    <Compile Include="tblTransaction.cs" />
+    <Compile Include="tblUnavailEmp.cs" />
+    <Compile Include="tblUserGroup.cs" />
+    <Compile Include="tblUserGroupLink.cs" />
+    <Compile Include="tblUserGroupRightLink.cs" />
+    <Compile Include="tblUserSecurity.cs" />
+    <Compile Include="tblVersion.cs" />
+    <Compile Include="tblWebEvent.cs" />
+    <Compile Include="tblWebJobNote.cs" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59456</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:58314/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

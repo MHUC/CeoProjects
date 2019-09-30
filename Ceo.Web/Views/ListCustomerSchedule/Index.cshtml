@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Ceo.Data.tblSchedule>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Schedule</h2>
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Schedule Type</th>
+            <th>Start Date</th>
+        </tr>
+    </thead>
+
+
+
+    @foreach (var customer in Model)
+    {
+
+       
+
+
+        <tr>
+            <td>@customer.tblCustomer.FirstName </td>
+            <td>@customer.Subject</td>
+            <td>@customer.StartDate</td>
+        </tr>
+
+    }
+
+
+
+</table>

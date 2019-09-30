@@ -1,0 +1,18 @@
+﻿@model Ceo.Web.ViewModels.FormCustomerScheduleViewModel
+@{
+    ViewBag.Title = "One Off Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>OneOff Schedule</h2>
+
+
+
+@using(Html.BeginForm("ListOneoffSchedule", "ListCustomerSchedule"))
+{
+
+    @Html.LabelFor(m => m.StartDate)
+    @Html.TextBoxFor(m => m.StartDate, new {@class = "form-control"})
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
